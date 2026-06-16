@@ -2,125 +2,132 @@
 
 [![Release](https://img.shields.io/github/v/release/ELMYNS/WA-auto-sender)](https://github.com/ELMYNS/WA-auto-sender/releases)
 
-Application Windows **simple**, **autonome** et **100% locale** pour l'envoi automatique de messages WhatsApp à votre propre liste de clients. Vos données restent sur votre PC — rien n'est partagé avec une plateforme tierce.
+A **simple**, **standalone**, **100% local** Windows app for automatically sending WhatsApp messages to your own client list. Your data stays on your PC — nothing is shared with third-party platforms.
 
-Le moteur d'envoi est **`whatsapp-web.js`** (le moteur sur lequel [OpenWA](https://github.com/rmyndharis/OpenWA) est construit), intégré **directement** dans l'application avec **Chromium embarqué**. Aucun serveur, aucun Docker, **aucun téléchargement au premier lancement** : on installe, on ouvre, on scanne le QR, on envoie.
+The messaging engine is **`whatsapp-web.js`** (the same engine [OpenWA](https://github.com/rmyndharis/OpenWA) is built on), integrated **directly** into the app with **bundled Chromium**. No server, no Docker, **no downloads on first launch**: install, open, scan the QR code, and send.
 
-> ⚠️ **Usage responsable** : n'envoyez qu'à des contacts qui ont accepté de recevoir vos messages. Respectez les [Conditions de WhatsApp](https://www.whatsapp.com/legal/business-policy/). Les limites/cadences intégrées servent à protéger votre compte.
+> ⚠️ **Responsible use**: only message contacts who have agreed to receive your messages. Follow [WhatsApp's policies](https://www.whatsapp.com/legal/business-policy/). Built-in rate limits and pacing help protect your account.
 
 ---
 
-## 📥 Téléchargement (utilisateurs)
+## 📥 Download (end users)
 
-Allez sur la page **[Releases](https://github.com/ELMYNS/WA-auto-sender/releases)** et téléchargez :
+Go to **[Releases](https://github.com/ELMYNS/WA-auto-sender/releases)** and download:
 
-| Fichier | Description |
+| File | Description |
 |---|---|
-| `WA Auto Sender Setup 1.0.0.exe` | **Installateur** — crée un raccourci sur le bureau (recommandé) |
-| `WA Auto Sender 1.0.0.exe` | **Portable** — double-clic, aucune installation |
+| `WA Auto Sender Setup 1.0.0.exe` | **Installer** — creates a desktop shortcut (recommended) |
+| `WA Auto Sender 1.0.0.exe` | **Portable** — double-click, no installation required |
 
-> 💡 Pour la version portable : copiez le `.exe` sur le **Bureau** avant de le lancer (ne l'exécutez pas depuis le dossier de téléchargement si vous prévoyez de le remplacer).
+> 💡 For the portable version: copy the `.exe` to your **Desktop** before running it (don't run it from the download folder if you plan to replace it later).
 
 ---
 
-## 📖 Mode d'emploi
+## 📖 How to use
 
-### 1. Première utilisation
+### 1. First-time setup
 
-1. **Installez** (Setup) ou **lancez** (Portable) l'application
-2. Allez dans **Connexion** (🔗)
-3. Sur votre téléphone : WhatsApp → **Appareils connectés** → **Connecter un appareil**
-4. **Scannez le QR code** affiché dans l'application
-5. Attendez le statut **Connecté** ✅
+1. **Install** (Setup) or **run** (Portable) the application
+2. Go to **Connection** (🔗)
+3. On your phone: WhatsApp → **Linked devices** → **Link a device**
+4. **Scan the QR code** shown in the app
+5. Wait for the **Connected** ✅ status
 
-### 2. Importer vos contacts
+### 2. Import your contacts
 
-1. Onglet **Contacts** (👥)
-2. **Importer un fichier** (`.txt`, `.csv`, `.xlsx`) ou **coller des numéros**
-3. Les numéros **marocains** sont détectés automatiquement (`06…`, `07…`, `+212…`)
-4. Vérifiez que vos contacts apparaissent avec le statut **« Pas encore envoyé »**
+1. Open the **Contacts** tab (👥)
+2. **Import a file** (`.txt`, `.csv`, `.xlsx`) or **paste numbers**
+3. **Moroccan numbers** are detected automatically (`06…`, `07…`, `+212…`)
+4. Confirm your contacts appear with the **"Not sent yet"** status
 
-### 3. Choisir un message
+### 3. Choose a message template
 
-1. Onglet **Modèles** (📝)
-2. Choisissez un modèle existant ou créez le vôtre (FR + Arabe)
-3. Variables disponibles : `{name}`, `{phone}`, `{date}`
+1. Open the **Templates** tab (📝)
+2. Pick an existing template or create your own (French + Arabic)
+3. Available variables: `{name}`, `{phone}`, `{date}`
 
-### 4. Lancer l'envoi automatique
+### 4. Start automatic sending
 
-1. Onglet **Envoi auto** (🚀)
-2. Sélectionnez un **modèle** et la **langue** (Français ou Arabe)
-3. Cliquez sur **Démarrer l'envoi**
-4. L'application envoie automatiquement à tous les contacts **« pas encore envoyé »**
-5. Utilisez **Pause** / **Reprendre** / **Arrêter** si besoin
+1. Open the **Auto Send** tab (🚀)
+2. Select a **template** and **language** (French or Arabic)
+3. Click **Start sending**
+4. The app automatically sends to all contacts marked **"not sent yet"**
+5. Use **Pause** / **Resume** / **Stop** as needed
 
-### 5. Suivre les résultats
+### 5. Track results
 
-- Onglet **Contacts** : filtres **Envoyé** / **Échec** / **Pas encore envoyé**
-- Bouton **Exporter** pour sauvegarder une liste
-- Onglet **Envoi auto** : progression et limite journalière
+- **Contacts** tab: filter by **Sent** / **Failed** / **Not sent yet**
+- **Export** button to save a list
+- **Auto Send** tab: progress and daily limit
 
-### 6. Réinitialiser
+### 6. Reset
 
-| Action | Où ? |
+| Action | Where |
 |---|---|
-| **Changer de numéro WhatsApp** | Connexion → **Déconnecter / Changer de numéro** |
-| **Supprimer les contacts** | Contacts → filtre → **Vider** |
-| **Tout réinitialiser** (numéro + contacts) | Réglages → **Réinitialiser l'application** |
+| **Change WhatsApp number** | Connection → **Disconnect / Change number** |
+| **Delete contacts** | Contacts → filter → **Clear** |
+| **Full reset** (number + contacts) | Settings → **Reset application** |
 
-> Vos données (contacts, session) sont stockées localement dans `%AppData%/wa-auto-sender` sur votre PC. Elles ne sont **jamais** envoyées sur Internet ni sur GitHub.
-
----
-
-## ✨ Fonctionnalités
-
-- 🔗 Connexion QR, session sauvegardée
-- 🚀 Envoi automatique avec cadence intelligente
-- 🌍 Interface **Français** + **Arabe** (RTL)
-- 📝 Modèles de messages business (FR/AR)
-- 👥 Import `.txt` / `.csv` / `.xlsx` + détection numéros marocains
-- 📊 Suivi envoyé / en attente / échec + export
-- ⏱️ Intervalles aléatoires, limite journalière, pauses entre lots
-- 🕐 Heures d'envoi configurables, option week-end
-- 💾 100% local — aucune donnée cloud
+> Your data (contacts, session) is stored locally in `%AppData%/wa-auto-sender` on your PC. It is **never** uploaded to the internet or to GitHub.
 
 ---
 
-## 🛠️ Développement (développeurs)
+## ✨ Features
 
-### Prérequis
+- 🔗 QR login with saved session
+- 🚀 Automatic sending with smart pacing
+- 🌍 **French** + **Arabic** UI (RTL)
+- 📝 Business message templates (FR/AR)
+- 👥 Import `.txt` / `.csv` / `.xlsx` + Moroccan number detection
+- 📊 Sent / pending / failed tracking + export
+- ⏱️ Random intervals, daily limit, batch pauses
+- 🕐 Configurable sending hours, weekend skip option
+- 💾 100% local — no cloud data
+
+---
+
+## 🛠️ Development
+
+### Requirements
 
 - Windows 10/11 (x64)
-- [Node.js](https://nodejs.org/) 20+ (22 recommandé)
+- [Node.js](https://nodejs.org/) 20+ (22 recommended)
 - Git
 
-### Installation
+### Setup
 
 ```powershell
 git clone https://github.com/ELMYNS/WA-auto-sender.git
 cd WA-auto-sender
 
-# Télécharge Chromium dans resources/chromium (nécessaire pour le build offline)
+# Downloads Chromium into resources/chromium (required for offline build)
 $env:PUPPETEER_CACHE_DIR="$PWD\resources\chromium"
 npm install
 ```
 
-### Mode développement
+### Development mode
 
 ```powershell
 npm run electron:dev
 ```
 
-### Compiler le .exe Windows
+### Build Windows .exe (offline)
 
 ```powershell
 npm run build
 ```
 
-Les installateurs sont générés dans `release/`.
+Installers are generated in `release/`.
 
-> En cas d'erreur de certificat SSL (proxy d'entreprise) :
-> `npm config set strict-ssl false` puis `$env:NODE_TLS_REJECT_UNAUTHORIZED="0"`
+> If you hit SSL certificate errors (corporate proxy):
+> `npm config set strict-ssl false` then `$env:NODE_TLS_REJECT_UNAUTHORIZED="0"`
+
+### Publish a GitHub release
+
+```powershell
+npm run build
+.\scripts\publish-release.ps1
+```
 
 ---
 
@@ -128,37 +135,39 @@ Les installateurs sont générés dans `release/`.
 
 ```
 electron/
-  main.ts                  # Process principal Electron + IPC
-  preload.ts               # Pont sécurisé renderer ↔ main
-  shared.ts                # Types partagés
+  main.ts                  # Electron main process + IPC
+  preload.ts               # Secure renderer ↔ main bridge
+  shared.ts                # Shared types
   services/
-    whatsapp-client.ts     # Moteur whatsapp-web.js + Chromium embarqué
-    campaign-engine.ts     # Boucle d'envoi auto (intervalles, limites, pauses)
-    database.ts            # Stockage local JSON
-    number-parser.ts       # Détection numéros marocains
+    whatsapp-client.ts     # whatsapp-web.js engine + bundled Chromium
+    campaign-engine.ts     # Auto-send loop (intervals, limits, pauses)
+    database.ts            # Local JSON storage
+    number-parser.ts       # Moroccan number detection
 src/
-  App.tsx + components/    # Interface React
-  i18n.ts                  # Traductions FR + AR
+  App.tsx + components/    # React UI
+  i18n.ts                  # French + Arabic translations
 resources/
-  icon.png                 # Icône
-  chromium/                # Chromium embarqué (généré à npm install, non versionné)
+  icon.png                 # App icon
+  chromium/                # Bundled Chromium (generated at npm install, not versioned)
 ```
 
 ---
 
-## ⚙️ Réglages recommandés (compte récent)
+## ⚙️ Recommended settings (new account)
 
-| Réglage | Valeur prudente |
+| Setting | Safe value |
 |---|---|
-| Limite journalière | 50–80 |
-| Intervalle min/max | 45 s / 120 s |
-| Taille du lot | 10 |
-| Pause entre lots | 5 min |
-| Pause de sécurité | toutes les 15, durée 3 min |
-| Heures d'envoi | 9h–20h, pas le week-end |
+| Daily limit | 50–80 |
+| Min/max interval | 45 s / 120 s |
+| Batch size | 10 |
+| Pause between batches | 5 min |
+| Safety pause | every 15 messages, 3 min duration |
+| Sending hours | 9 AM–8 PM, skip weekends |
+
+Increase gradually over weeks if your account stays healthy.
 
 ---
 
-## 📄 Licence
+## 📄 License
 
-[MIT](LICENSE) — utilise `whatsapp-web.js` (Apache-2.0). WhatsApp est une marque de Meta ; ce projet n'est pas affilié à WhatsApp/Meta.
+[MIT](LICENSE) — uses `whatsapp-web.js` (Apache-2.0). WhatsApp is a Meta trademark; this project is not affiliated with WhatsApp/Meta.
