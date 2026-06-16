@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-electron/
+release/
+release-new/
+resources/chromium/
+resources/openwa-bundle/
+*.log
+.DS_Store
+data/
+.env
+.env.*
+*.sqlite
+*.db
+wa-auto-sender.json
+src/types.js
